@@ -22,10 +22,6 @@ urlpatterns = [
      path('citas', views.citas, name='citas'),
      path('pacientes', views.pacientes, name='pacientes'),
      path('sendjson', views.send_json),
-<<<<<<< HEAD
-     path('test', views.test),
-=======
      path('medicos', views.medicos, name='medicos'),
      path('historial', views.historial, name='historial'),
->>>>>>> 76ab5e60b7571cb231b9d6192b3afdb53d3fd0da
 ]
