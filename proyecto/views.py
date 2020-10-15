@@ -16,6 +16,5 @@ def index(request):
 @csrf_exempt
 def send_json(request):
     codigo=request.POST['user']
-
     data = [{'user':codigo}]
     return JsonResponse(data, safe=False)
