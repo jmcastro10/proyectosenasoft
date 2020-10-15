@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block javaScript %}
+<script src="{% static 'vendor/js/formPacientes.js' %}"></script>
+<script >
+    $(document).ready(function() {
+        inicio();      
+    })
+</script>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <form id="ingresarPaciente">
+                    <div class="form-group">
+                        <input type="text" name="Nombre"    class="form-control" placeholder="Nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Apellido"  class="form-control" placeholder="Apellido">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Dni"   class="form-control" placeholder="Dni">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Direccion" class="form-control" placeholder="Direccion">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Telefono"  class="form-control" placeholder="Telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="strato">Estrato</label>
+                        <select name="Estrato" id="strato" class="form-control">
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                        </select>                   
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="correo"    class="form-control" placeholder="correo">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="ingresar"   class="form-control" >
+                    </div>
+
+                </form>             
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

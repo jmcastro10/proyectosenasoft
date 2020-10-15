@@ -19,8 +19,10 @@ def index(request):
 
 def historial(request): 
     return render(request,'historial.html')
-  
 
+def formPaciente(request): 
+    return render(request,'formPaciente.html')
+  
 @csrf_exempt
 def send_json(request):
     codigo=request.POST['user']
@@ -30,9 +32,21 @@ def send_json(request):
 @csrf_exempt
 def test(request):
     data = []
+   
     #sql='SELECT * FROM proyecto_medicos WHERE "_idMedico" = 5'
-    sql= "INSERT INTO proyecto_medicos values ('5','juac', 'correa','herazo@meet.com', 313456529)"
+    sql= "INSERT INTO proyecto_pacientes values ('')"
+   
+    
     data = setQuery(sql)      
+    return JsonResponse(data, safe=False)
+
+@csrf_exempt
+def sendFormPaciente(request):
+    ps=request.POST
+    #if request.method == 'POST':
+    sql= "INSERT INTO proyecto_pacientes values ('"+ps['Nombre']+"','"+ps['Apellido']+"','"+ps['Dni']+"','"+ps['Direccion']+"','"+ps['Telefono']+"','"+ps['Estrato']+"','"+ps['correo']+"')"
+    data = setQuery(sql)  
+
     return JsonResponse(data, safe=False)
 
 #def getQuery(sql):

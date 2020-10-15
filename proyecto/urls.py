@@ -24,4 +24,6 @@ urlpatterns = [
      path('sendjson', views.send_json),
      path('medicos', views.medicos, name='medicos'),
      path('historial', views.historial, name='historial'),
+     path('formPaciente', views.formPaciente, name='formPaciente'),
+     path('sendFormPaciente', views.sendFormPaciente, name='sendFormPaciente'),
 ]
