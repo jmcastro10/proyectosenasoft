@@ -22,4 +22,5 @@ urlpatterns = [
      path('citas', views.citas, name='citas'),
      path('pacientes', views.pacientes, name='pacientes'),
      path('sendjson', views.send_json),
+     path('test', views.test),
 ]
