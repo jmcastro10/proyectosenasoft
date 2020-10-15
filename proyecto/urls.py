@@ -18,6 +18,8 @@ from django.urls import path
 from proyecto import views
 urlpatterns = [
     #path('admin/', admin.site.urls),
-     path('', views.index),
-     path('sendjson/', views.send_json),
+     path('', views.index, name='home'),
+     path('citas', views.citas, name='citas'),
+     path('pacientes', views.pacientes, name='pacientes'),
+     path('sendjson', views.send_json),
 ]

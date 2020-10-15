@@ -4,8 +4,11 @@ from django.template.loader import get_template
 from django.shortcuts import render
 from django.http import JsonResponse
 
-def saludo(request): 
-    return render(request,'base.html')
+def citas(request): 
+    return render(request,'citas.html')
+
+def pacientes(request): 
+    return render(request,'pacientes.html')
 
 def index(request): 
     return render(request,'home.html')
